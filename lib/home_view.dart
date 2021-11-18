@@ -43,26 +43,12 @@ class _HomeViewState extends State<HomeView> {
               Expanded(
                   child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: FlatButton(
-                  onPressed: () {
-                    playButton("bip.wav");
-                  },
-                  child: Container(
-                    color: Colors.red,
-                  ),
-                ),
+                child: buttonWidget("bip.wav", Colors.blue),
               )),
               Expanded(
                   child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: FlatButton(
-                  onPressed: () {
-                    playButton("bongo.wav");
-                  },
-                  child: Container(
-                    color: Colors.blue,
-                  ),
-                ),
+                child: buttonWidget("bongo.wav", Colors.red),
               ))
             ],
           ),
@@ -73,26 +59,12 @@ class _HomeViewState extends State<HomeView> {
               Expanded(
                   child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: FlatButton(
-                  onPressed: () {
-                    playButton("clap1.wav");
-                  },
-                  child: Container(
-                    color: Colors.brown,
-                  ),
-                ),
+                child: buttonWidget("clap2.wav", Colors.brown),
               )),
               Expanded(
                   child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: FlatButton(
-                  onPressed: () {
-                    playButton("clap2.wav");
-                  },
-                  child: Container(
-                    color: Colors.orange,
-                  ),
-                ),
+                child: buttonWidget("clap3.wav", Colors.yellow),
               ))
             ],
           ),
@@ -103,26 +75,12 @@ class _HomeViewState extends State<HomeView> {
               Expanded(
                   child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: FlatButton(
-                  onPressed: () {
-                    playButton("clap3.wav");
-                  },
-                  child: Container(
-                    color: Colors.green,
-                  ),
-                ),
+                child: buttonWidget("crash.wav", Colors.orange),
               )),
               Expanded(
                   child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: FlatButton(
-                  onPressed: () {
-                    playButton("crash.wav");
-                  },
-                  child: Container(
-                    color: Colors.purple,
-                  ),
-                ),
+                child: buttonWidget("how.wav", Colors.pink),
               ))
             ],
           ),
@@ -133,31 +91,28 @@ class _HomeViewState extends State<HomeView> {
               Expanded(
                   child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: FlatButton(
-                  onPressed: () {
-                    playButton("oobah.wav");
-                  },
-                  child: Container(
-                    color: Colors.yellow,
-                  ),
-                ),
+                child: buttonWidget("oobah.wav", Colors.purple),
               )),
               Expanded(
                   child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: FlatButton(
-                  onPressed: () {
-                    playButton("ridebel.wav");
-                  },
-                  child: Container(
-                    color: Colors.pink,
-                  ),
-                ),
+                child: buttonWidget("ridebel.wav", Colors.green),
               ))
             ],
           ),
         ),
       ],
     ));
+  }
+
+  FlatButton buttonWidget(String ses, Color renk) {
+    return FlatButton(
+      onPressed: () {
+        playButton(ses);
+      },
+      child: Container(
+        color: renk,
+      ),
+    );
   }
 }
